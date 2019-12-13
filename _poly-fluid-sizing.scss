@@ -69,7 +69,7 @@ $breakpoints: () !default;
         $key1: nth($keys, $i);
         $key2: nth($keys, $i + 1);
 
-        @if (type-of($value1) != 'number' && $value1 == $value2) {
+        @if (type-of($value1) != "number" and $value1 == $value2) {
           $result: append($result, $value1);
         } @else if ($value1 != $value2) {
           $result: append($result, linear-interpolation(($key1: $value1, $key2: $value2)), $low-separator);
