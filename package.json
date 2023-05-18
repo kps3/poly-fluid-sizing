@@ -1,6 +1,6 @@
 {
   "name": "poly-fluid-sizing",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "SASS mixin for linear interpolation between multiple values across multiple breakpoints using CSS calc() and viewport units",
   "main": "_poly-fluid-sizing.scss",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jakobud/poly-fluid-sizing.git"
+    "url": "https://github.com/kps3/poly-fluid-sizing.git"
   },
   "keywords": [
     "fluid",
@@ -21,7 +21,7 @@
   "email": "jake.e.wilson@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Jakobud/poly-fluid-sizing/issues"
+    "url": "https://github.com/kps3/poly-fluid-sizing/issues"
   },
-  "homepage": "https://github.com/Jakobud/poly-fluid-sizing"
+  "homepage": "https://github.com/kps3/poly-fluid-sizing"
 }

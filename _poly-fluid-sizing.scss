@@ -4,6 +4,8 @@
 @import 'map-sort';
 @import 'linear-interpolation';
 
+$breakpoints: () !default;
+
 /// poly-fluid-sizing
 /// Generate linear interpolated size values through multiple break points
 /// @param $property - A string CSS property name
@@ -22,6 +24,18 @@
   // Error if the number of breakpoints is < 2
   @if ($length < 2) {
     @error "poly-fluid-sizing() $map requires at least two values";
+  }
+
+  $keys: map-keys($map);
+
+  @each $key in $keys {
+    $new-key: $key;
+
+    @if (map-has-key($breakpoints, $key)) {
+      $new-key: map-get($breakpoints, $key);
+      $map: map-merge($map, ($new-key: map-get($map, $key)));
+      $map: map-remove($map, $key);
+    }
   }
 
   // Sort the map by viewport width (key)
@@ -55,7 +69,9 @@
         $key1: nth($keys, $i);
         $key2: nth($keys, $i + 1);
 
-        @if ($value1 != $value2) {
+        @if (type-of($value1) != "number" and $value1 == $value2) {
+          $result: append($result, $value1);
+        } @else if ($value1 != $value2) {
           $result: append($result, linear-interpolation(($key1: $value1, $key2: $value2)), $low-separator);
         } @else {
           $result: append($result, $value1, $low-separator);
