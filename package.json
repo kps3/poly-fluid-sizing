@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jakobud/poly-fluid-sizing.git"
+    "url": "https://github.com/kps3/poly-fluid-sizing.git"
   },
   "keywords": [
     "fluid",
@@ -21,7 +21,7 @@
   "email": "jake.e.wilson@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Jakobud/poly-fluid-sizing/issues"
+    "url": "https://github.com/kps3/poly-fluid-sizing/issues"
   },
-  "homepage": "https://github.com/Jakobud/poly-fluid-sizing"
+  "homepage": "https://github.com/kps3/poly-fluid-sizing"
 }
